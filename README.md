@@ -1,1 +1,1 @@
-## Implementation of ls command with arguments
+## Implementation of the ls command with arguments
