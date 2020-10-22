@@ -3,3 +3,15 @@ Implementation of a subset of functions of the ls command, namely the (-ialR) ar
 
 ![alt text](https://github.com/mchara01/Unix-Command-ls/blob/main/images/ls_def.JPG?raw=true)
 
+### Functionality
+Compile the source code first with: `gcc myls.c -o myls`
+
+The different ways the program can execute are listed below
+
+`myls` : Performs a corresponding function with the command ls –ialR<br />
+`myls a/ b/ c/` : Performs a corresponding function with the command ls –ialR a/ b/ c/ <br />
+`myls –depth 2` : Performs a corresponding function with the command ls –ialR but the depth of investigation is limited to two levels.<br />
+`myls -follow-symbolic` : The algorithm follows both the symbolic files and directories. If it is a directory then it prints its contents normally. In this case, a check is made to see if the directory has already been printed so that it does not re-print it (nor further edit it). This control it is as efficient as possible since scanning the entire list of previous paths is avoided. Note that the search algorithm in all cases is Depth-First-Search.<br />
+`myls –output traversal-log.txt` : Prints to a file named traversal-log.txt the depth-first-search path followed by the myls command.<br />
+
+Note that the application supports any combination of the above arguments and produces the expected result.
